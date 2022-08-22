@@ -79,7 +79,7 @@ var a_o = await o_data_manager.f_a_o_update(
 );
 console.log(a_o)
 ```
-# o_data_manager_config.json
+# o_data_manager_config.module.js_config.json
 example of the config 
 every model will get the timestamps
 ```json
