@@ -20,21 +20,15 @@ var o_data_manager = new O_data_manager();
 
 
 //create some objects
-var o = await o_data_manager.f_o_create(new O_test('lol')); 
+var o = await o_data_manager.f_o_create(new O_test('leguan')); 
 console.log(o)
-var o = await o_data_manager.f_o_create(new O_test('hello')); 
+var o = await o_data_manager.f_o_create(new O_test('tiger')); 
 console.log(o)
-var o = await o_data_manager.f_o_create(new O_test('hello')); 
+var o = await o_data_manager.f_o_create(new O_test('dog')); 
 console.log(o)
-var o = await o_data_manager.f_o_create(new O_test('hello')); 
-console.log(o)
-var o = await o_data_manager.f_o_create(new O_test('hello')); 
-console.log(o)
-var o = await o_data_manager.f_o_create(new O_test('yes')); 
-console.log(o)
-var o = await o_data_manager.f_o_create(new O_test('cool')); 
-console.log(o)
+var o = await o_data_manager.f_o_create(new O_test('cat'));
 
+var o = await o_data_manager.f_o_create(new O_test('leguan')); 
 var a_o = await o_data_manager.f_a_o_read(
     O_test,
     {
@@ -54,21 +48,15 @@ var a_o = await o_data_manager.f_a_o_read(
     {n_id: 5}
 );
 console.log(a_o)
-console.log("read with criterium (s_name: 'hello')")
+console.log("read with criterium (s_name: 'tiger')")
 var a_o = await o_data_manager.f_a_o_read(
     O_test,
-    {s_name: "hello"}
+    {s_name: "tiger"}
 );
 console.log(a_o)
 
 
-console.log("delete with criterium {s_name: 'hello'}")
-var a_o = await o_data_manager.f_a_o_delete(
-    O_test, 
-    {
-        s_name: "hello"
-    }
-)
+
 
 console.log("read all") 
 var a_o = await o_data_manager.f_a_o_read(
@@ -78,14 +66,22 @@ var a_o = await o_data_manager.f_a_o_read(
 console.log(a_o)
 
 
-console.log("update with criterium {s_name: 'lol'}, updated {s_name: 'lol :)'}") 
+console.log("update with criterium {s_name: 'leguan'}, updated {s_name: 'iguana'}") 
 var a_o = await o_data_manager.f_a_o_update(
     O_test,
-    {s_name:"lol"},
-    {s_name:"lol :)"}
+    {s_name:"leguan"},
+    {s_name:"iguana"}
 );
 console.log(a_o)
 
+
+
+var a_o = await o_data_manager.f_a_o_update(
+    O_test,
+    {s_name:"tiger"},
+    {s_name:"tiger-cat"}
+);
+console.log(a_o)
 
 
 // var n_i =0; 
